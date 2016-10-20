@@ -5,24 +5,24 @@ open Swensen.Unquote
 open Types
 open Functions
 
-//[<Fact>]
-//let ``2-1 Increase min credit using id``() =
-//    let customer = { Id = 1; IsVip = false; Credit = 0M }
-//    let upgradedCustomer = increaseCredit (fun c -> c.Id = 2) customer
-//    test <@ upgradedCustomer.Credit = 50M @>
-//
-//[<Fact>]
-//let ``2-2 Increase max credit using id``() =
-//    let customer = { Id = 2; IsVip = false; Credit = 0M }
-//    let upgradedCustomer = increaseCredit (fun c -> c.Id = 2) customer
-//    test <@ upgradedCustomer.Credit = 100M @>
-//
-//[<Fact>]
-//let ``2-3 Increase credit keeping existing one``() =
-//    let customer = { Id = 2; IsVip = false; Credit = 10M }
-//    let upgradedCustomer = increaseCredit (fun c -> c.Id = 2) customer
-//    test <@ upgradedCustomer.Credit = 110M @>
-//
+[<Fact>]
+let ``2-1 Increase min credit using id``() =
+   let customer = { Id = 1; IsVip = false; Credit = 0M }
+   let upgradedCustomer = increaseCredit (fun c -> c.Id = 2) customer
+   test <@ upgradedCustomer.Credit = 50M @>
+
+[<Fact>]
+let ``2-2 Increase max credit using id``() =
+   let customer = { Id = 2; IsVip = false; Credit = 0M }
+   let upgradedCustomer = increaseCredit (fun c -> c.Id = 2) customer
+   test <@ upgradedCustomer.Credit = 100M @>
+
+[<Fact>]
+let ``2-3 Increase credit keeping existing one``() =
+   let customer = { Id = 2; IsVip = false; Credit = 10M }
+   let upgradedCustomer = increaseCredit (fun c -> c.Id = 2) customer
+   test <@ upgradedCustomer.Credit = 110M @>
+
 //[<Fact>]
 //let ``2-4 Vip condition using non-vip customer``() =
 //    let customer = { Id = 2; IsVip = false; Credit = 0M }
