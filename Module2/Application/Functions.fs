@@ -14,3 +14,4 @@ let increaseCredit condition customer =
     if condition customer then {customer with Credit = customer.Credit + 100m}
     else {customer with Credit = customer.Credit + 50m}
 
+let vipCondition customer = customer.IsVip

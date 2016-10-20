@@ -15,4 +15,4 @@ let customer2Spendings = getSpendings customer2
 
 let customer1WithMoreCredit = increaseCredit (fun c -> c.IsVip) customer1 
 
-
+let result = increaseCredit vipCondition

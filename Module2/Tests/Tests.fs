@@ -23,16 +23,16 @@ let ``2-3 Increase credit keeping existing one``() =
    let upgradedCustomer = increaseCredit (fun c -> c.Id = 2) customer
    test <@ upgradedCustomer.Credit = 110M @>
 
-//[<Fact>]
-//let ``2-4 Vip condition using non-vip customer``() =
-//    let customer = { Id = 2; IsVip = false; Credit = 0M }
-//    test <@ not (customer |> vipCondition) @>
-//
-//[<Fact>]
-//let ``2-5 Vip condition using vip customer``() =
-//    let customer = { Id = 2; IsVip = true; Credit = 0M }
-//    test <@ customer |> vipCondition @>
-//
+[<Fact>]
+let ``2-4 Vip condition using non-vip customer``() =
+   let customer = { Id = 2; IsVip = false; Credit = 0M }
+   test <@ not (customer |> vipCondition) @>
+
+[<Fact>]
+let ``2-5 Vip condition using vip customer``() =
+   let customer = { Id = 2; IsVip = true; Credit = 0M }
+   test <@ customer |> vipCondition @>
+
 //[<Fact>]
 //let ``2-6 Increase max credit using vip``() =
 //    let customer = { Id = 2; IsVip = true; Credit = 0M }
