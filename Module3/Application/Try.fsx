@@ -37,4 +37,4 @@ let customer2WithMoreCredit = customer2 |> increaseCredit vipCondition
 let result = increaseCredit vipCondition
 
 let upgradedCustomer1 = upgradeCustomer customer1
-let upgradedCustoemr2 = upgradeCustomer customer2
+let upgradedCustomer2 = upgradeCustomer customer2

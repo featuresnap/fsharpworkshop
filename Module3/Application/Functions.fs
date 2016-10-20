@@ -25,3 +25,10 @@ let isAdult customer =
     match customer.PersonalDetails with
     |None -> false
     |Some d -> d.DateOfBirth.AddYears 18 <= DateTime.Now.Date
+
+
+let getAlert customer = 
+    match customer.Notifications with 
+    |ReceiveNotifications(receiveDeals = _; receiveAlerts = true) -> 
+        Some (sprintf "Alert for customer: %i" customer.Id)
+    |_ -> None
