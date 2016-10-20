@@ -39,14 +39,14 @@ let ``2-6 Increase max credit using vip``() =
    let upgradedCustomer = increaseCreditUsingVip customer
    test <@ upgradedCustomer.Credit = 100M @>
 
-//[<Fact>]
-//let ``2-7 Upgrade customer with high spendings``() =
-//    let customer = { Id = 2; IsVip = false; Credit = 0M }
-//    let upgradedCustomer = upgradeCustomer customer
-//    test <@ upgradedCustomer.IsVip = true && upgradedCustomer.Credit = 100M @>
-//
-//[<Fact>]
-//let ``2-8 Upgrade customer with low spendings``() =
-//    let customer = { Id = 1; IsVip = false; Credit = 0M }
-//    let upgradedCustomer = upgradeCustomer customer
-//    test <@ upgradedCustomer.IsVip = false && upgradedCustomer.Credit = 50M @>
+[<Fact>]
+let ``2-7 Upgrade customer with high spendings``() =
+   let customer = { Id = 2; IsVip = false; Credit = 0M }
+   let upgradedCustomer = upgradeCustomer customer
+   test <@ upgradedCustomer.IsVip = true && upgradedCustomer.Credit = 100M @>
+
+[<Fact>]
+let ``2-8 Upgrade customer with low spendings``() =
+   let customer = { Id = 1; IsVip = false; Credit = 0M }
+   let upgradedCustomer = upgradeCustomer customer
+   test <@ upgradedCustomer.IsVip = false && upgradedCustomer.Credit = 50M @>
