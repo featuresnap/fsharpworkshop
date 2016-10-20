@@ -12,8 +12,8 @@ let getSpendings customer =
     else (customer, 80M)
 
 let increaseCredit condition customer =
-    if condition customer then { customer with Credit = customer.Credit + 100M }
-    else { customer with Credit = customer.Credit + 50M }
+    if condition customer then { customer with Credit = customer.Credit + 100M<USD> }
+    else { customer with Credit = customer.Credit + 50M<USD> }
 
 let vipCondition customer = customer.IsVip
 
