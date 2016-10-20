@@ -22,14 +22,14 @@ let ``1-3 Do not promote to vip``() =
    let promotedCustomer = tryPromoteToVip (customer, 99.9M)
    test <@ promotedCustomer.IsVip = false @>
 
-//[<Fact>]
-//let ``1-4 Get spendings for odd customers``() =
-//    let customer = { Id = 1; IsVip = false; Credit = 0M }
-//    let _, spendings = getSpendings customer
-//    test <@ spendings = 80M @>
-//
-//[<Fact>]
-//let ``1-5 Get spendings for even customers``() =
-//    let customer = { Id = 2; IsVip = false; Credit = 0M }
-//    let _, spendings = getSpendings customer
-//    test <@ spendings = 120M @>
+[<Fact>]
+let ``1-4 Get spendings for odd customers``() =
+   let customer = { Id = 1; IsVip = false; Credit = 0M }
+   let _, spendings = getSpendings customer
+   test <@ spendings = 80M @>
+
+[<Fact>]
+let ``1-5 Get spendings for even customers``() =
+   let customer = { Id = 2; IsVip = false; Credit = 0M }
+   let _, spendings = getSpendings customer
+   test <@ spendings = 120M @>
