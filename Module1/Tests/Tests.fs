@@ -5,11 +5,11 @@ open Swensen.Unquote
 open Types
 open Functions
 
-//[<Fact>]
-//let ``1-1 Create customer``() =
-//    let customer = { Id = 1; IsVip = false; Credit = 0M }
-//    test <@ customer.GetType () = typeof<Customer> @>
-//
+[<Fact>]
+let ``1-1 Create customer``() =
+   let customer = { Id = 1; IsVip = false; Credit = 0M }
+   test <@ customer.GetType () = typeof<Customer> @>
+
 //[<Fact>]
 //let ``1-2 Promote to vip``() =
 //    let customer = { Id = 1; IsVip = false; Credit = 0M }
