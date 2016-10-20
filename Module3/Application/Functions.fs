@@ -20,3 +20,8 @@ let vipCondition customer = customer.IsVip
 let increaseCreditUsingVip = increaseCredit vipCondition
 
 let upgradeCustomer = getSpendings >> tryPromoteToVip >> increaseCreditUsingVip
+
+let isAdult customer = 
+    match customer.PersonalDetails with
+    |None -> false
+    |Some d -> d.DateOfBirth.AddYears 18 <= DateTime.Now.Date
