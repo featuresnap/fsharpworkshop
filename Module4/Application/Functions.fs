@@ -10,9 +10,11 @@ let tryPromoteToVip (customer, spendings) =
 let getSpendingsByMonth customer = customer.Id |> Data.getSpendings
 
 let getSpendings customer =
-    if customer.Id % 2 = 0 then (customer, 120M)
-    else (customer, 80M)
-
+    let spending = customer
+                    |> getSpendingsByMonth
+                    |> List.average
+    (customer, spending)
+    
 let increaseCredit condition customer =
     if condition customer then { customer with Credit = customer.Credit + 100M<USD> }
     else { customer with Credit = customer.Credit + 50M<USD> }
