@@ -33,12 +33,12 @@ let ``2-5 Vip condition using vip customer``() =
    let customer = { Id = 2; IsVip = true; Credit = 0M }
    test <@ customer |> vipCondition @>
 
-//[<Fact>]
-//let ``2-6 Increase max credit using vip``() =
-//    let customer = { Id = 2; IsVip = true; Credit = 0M }
-//    let upgradedCustomer = increaseCreditUsingVip customer
-//    test <@ upgradedCustomer.Credit = 100M @>
-//
+[<Fact>]
+let ``2-6 Increase max credit using vip``() =
+   let customer = { Id = 2; IsVip = true; Credit = 0M }
+   let upgradedCustomer = increaseCreditUsingVip customer
+   test <@ upgradedCustomer.Credit = 100M @>
+
 //[<Fact>]
 //let ``2-7 Upgrade customer with high spendings``() =
 //    let customer = { Id = 2; IsVip = false; Credit = 0M }
