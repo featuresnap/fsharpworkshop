@@ -17,3 +17,9 @@ let increaseCredit condition customer =
 let vipCondition customer = customer.IsVip
 
 let increaseCreditUsingVip = increaseCredit vipCondition
+
+let upgradeCustomer customer = 
+    let customerWithSpendings = getSpendings customer
+    let promotedCustomer = tryPromoteToVip customerWithSpendings
+    let upgradedCustomer = increaseCreditUsingVip promotedCustomer
+    upgradedCustomer
