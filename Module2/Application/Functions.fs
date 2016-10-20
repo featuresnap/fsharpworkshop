@@ -9,3 +9,8 @@ let tryPromoteToVip (customer, spendings) =
 let getSpendings customer =
     if customer.Id % 2 = 0 then (customer, 120M)
     else (customer, 80M)
+
+let increaseCredit customer = 
+    if customer.IsVip then {customer with Credit = customer.Credit + 100m}
+    else {customer with Credit = customer.Credit + 50m}
+

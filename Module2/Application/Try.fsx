@@ -12,3 +12,6 @@ let nonVipCustomer2 = tryPromoteToVip (customer2, 99M)
 
 let customer1Spendings = getSpendings customer1
 let customer2Spendings = getSpendings customer2
+
+let customer1Increased = increaseCredit customer1
+let customer2Increased = increaseCredit customer2
